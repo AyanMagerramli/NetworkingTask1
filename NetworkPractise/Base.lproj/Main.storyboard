@@ -144,6 +144,7 @@
                     <connections>
                         <segue destination="J2p-R3-bcC" kind="relationship" relationship="viewControllers" id="SeM-Ko-YWo"/>
                         <segue destination="dQa-Q7-Lyf" kind="relationship" relationship="viewControllers" id="czM-68-uXg"/>
+                        <segue destination="Zz3-Xk-shd" kind="relationship" relationship="viewControllers" id="VSB-UM-RRG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asr-GI-TdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,7 +176,7 @@
         <scene sceneID="Z9t-O8-zEx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2p-R3-bcC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" selectedImage="folder.fill" catalog="system" id="DGm-ok-hBO"/>
+                    <tabBarItem key="tabBarItem" title="User" selectedImage="person.fill" catalog="system" id="DGm-ok-hBO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ktg-bJ-Omi">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -190,9 +191,60 @@
             </objects>
             <point key="canvasLocation" x="-816" y="732"/>
         </scene>
+        <!--Albums-->
+        <scene sceneID="AhU-Fc-oUm">
+            <objects>
+                <viewController storyboardIdentifier="AlbumViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5oc-K3-r16" customClass="AlbumViewController" customModule="NetworkPractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gyp-Bo-0vI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DiV-PV-Wph">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="px3-jX-KIc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="px3-jX-KIc" firstAttribute="trailing" secondItem="DiV-PV-Wph" secondAttribute="trailing" id="MMO-BA-Ihz"/>
+                            <constraint firstItem="DiV-PV-Wph" firstAttribute="leading" secondItem="px3-jX-KIc" secondAttribute="leading" id="fNk-k9-YNy"/>
+                            <constraint firstItem="DiV-PV-Wph" firstAttribute="top" secondItem="px3-jX-KIc" secondAttribute="top" id="p13-pi-ZVq"/>
+                            <constraint firstItem="px3-jX-KIc" firstAttribute="bottom" secondItem="DiV-PV-Wph" secondAttribute="bottom" id="xNq-Uy-6QU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Albums" id="sgh-d0-IMD"/>
+                    <connections>
+                        <outlet property="table" destination="DiV-PV-Wph" id="wA0-jL-LCx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIC-HC-hwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="1420"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="egs-5f-MQO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zz3-Xk-shd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Albums" selectedImage="folder.fill" catalog="system" id="YHd-oT-F8r"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Xe-dt-LJN">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5oc-K3-r16" kind="relationship" relationship="rootViewController" id="7pw-1T-xCa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwG-nC-hDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="1420"/>
+        </scene>
     </scenes>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="text.bubble.fill.rtl" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

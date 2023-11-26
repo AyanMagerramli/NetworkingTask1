@@ -32,6 +32,11 @@
 		11FC11222B13B9BD009C844E /* UserDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11202B13B9BD009C844E /* UserDetailsCell.swift */; };
 		11FC11232B13B9BD009C844E /* UserDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FC11212B13B9BD009C844E /* UserDetailsCell.xib */; };
 		11FC11252B13BF66009C844E /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */; };
+		11FC11282B13C60C009C844E /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11272B13C60C009C844E /* AlbumViewController.swift */; };
+		11FC112A2B13C635009C844E /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11292B13C635009C844E /* AlbumViewModel.swift */; };
+		11FC112D2B13C6DC009C844E /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC112B2B13C6DC009C844E /* AlbumCell.swift */; };
+		11FC112E2B13C6DC009C844E /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FC112C2B13C6DC009C844E /* AlbumCell.xib */; };
+		11FC11302B13C878009C844E /* AlbumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC112F2B13C878009C844E /* AlbumResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,11 @@
 		11FC11202B13B9BD009C844E /* UserDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsCell.swift; sourceTree = "<group>"; };
 		11FC11212B13B9BD009C844E /* UserDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsCell.xib; sourceTree = "<group>"; };
 		11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		11FC11272B13C60C009C844E /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		11FC11292B13C635009C844E /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		11FC112B2B13C6DC009C844E /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		11FC112C2B13C6DC009C844E /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		11FC112F2B13C878009C844E /* AlbumResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 				1166F49E2B13533200ECF666 /* Info.plist */,
 				1166F4B02B1391A000ECF666 /* Post tab */,
 				11FC11152B13B15F009C844E /* Users tab */,
+				11FC11262B13C54B009C844E /* Albums tab */,
 			);
 			path = NetworkPractise;
 			sourceTree = "<group>";
@@ -138,6 +149,18 @@
 				11FC11212B13B9BD009C844E /* UserDetailsCell.xib */,
 			);
 			path = "Users tab";
+			sourceTree = "<group>";
+		};
+		11FC11262B13C54B009C844E /* Albums tab */ = {
+			isa = PBXGroup;
+			children = (
+				11FC112F2B13C878009C844E /* AlbumResponseModel.swift */,
+				11FC11272B13C60C009C844E /* AlbumViewController.swift */,
+				11FC11292B13C635009C844E /* AlbumViewModel.swift */,
+				11FC112B2B13C6DC009C844E /* AlbumCell.swift */,
+				11FC112C2B13C6DC009C844E /* AlbumCell.xib */,
+			);
+			path = "Albums tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +228,7 @@
 				1166F49A2B13533200ECF666 /* Assets.xcassets in Resources */,
 				1166F4982B13533100ECF666 /* Main.storyboard in Resources */,
 				1166F4B42B139C2D00ECF666 /* PostCell.xib in Resources */,
+				11FC112E2B13C6DC009C844E /* AlbumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +247,7 @@
 				1166F4B72B13A13C00ECF666 /* CommentCell.swift in Sources */,
 				1166F4952B13533100ECF666 /* PostViewController.swift in Sources */,
 				1166F4AD2B13849500ECF666 /* PostViewModel.swift in Sources */,
+				11FC112A2B13C635009C844E /* AlbumViewModel.swift in Sources */,
 				1166F4AB2B13808C00ECF666 /* NetworkManager.swift in Sources */,
 				11FC111C2B13B3B4009C844E /* UserCell.swift in Sources */,
 				1166F4912B13533100ECF666 /* AppDelegate.swift in Sources */,
@@ -231,7 +256,10 @@
 				1166F4A72B13618000ECF666 /* CommentsViewController.swift in Sources */,
 				1166F4932B13533100ECF666 /* SceneDelegate.swift in Sources */,
 				1166F4B32B139C2D00ECF666 /* PostCell.swift in Sources */,
+				11FC112D2B13C6DC009C844E /* AlbumCell.swift in Sources */,
+				11FC11302B13C878009C844E /* AlbumResponseModel.swift in Sources */,
 				11FC111F2B13B8F4009C844E /* UserDetailsViewController.swift in Sources */,
+				11FC11282B13C60C009C844E /* AlbumViewController.swift in Sources */,
 				11FC11192B13B1B9009C844E /* UserResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
