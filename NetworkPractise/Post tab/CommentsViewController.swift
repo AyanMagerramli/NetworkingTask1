@@ -10,8 +10,9 @@ import UIKit
 class CommentsViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
+  
     
-    let viewModel = CommentsViewModel(networkManager: NetworkManager.shared)
+    var viewModel = CommentsViewModel(networkManager: NetworkManager.shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class CommentsViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
+        navigationItem.title = "Comments"
     }
 }
 

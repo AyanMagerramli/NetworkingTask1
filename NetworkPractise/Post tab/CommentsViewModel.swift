@@ -10,7 +10,7 @@ import Foundation
 final class CommentsViewModel {
     var commentItems = [CommentResponseModel]()
     let networkManager: NetworkManager
-    var postId = 0
+    var postId: Int = 0
     
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
@@ -19,7 +19,7 @@ final class CommentsViewModel {
     func getComments(completion: @escaping (()-> Void)) {
         networkManager.getObjects(
             type: [CommentResponseModel].self,
-            urlParam: "comments?postId=4")
+            urlParam: "comments?postId=\(postId)")
         {
             [weak self] result in
             switch result {

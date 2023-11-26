@@ -79,7 +79,7 @@
 				1166F4902B13533100ECF666 /* AppDelegate.swift */,
 				1166F4922B13533100ECF666 /* SceneDelegate.swift */,
 				1166F4AA2B13808C00ECF666 /* NetworkManager.swift */,
-				1166F4B02B1391A000ECF666 /* Posts Page */,
+				1166F4B02B1391A000ECF666 /* Post tab */,
 				1166F4962B13533100ECF666 /* Main.storyboard */,
 				1166F4992B13533200ECF666 /* Assets.xcassets */,
 				1166F49B2B13533200ECF666 /* LaunchScreen.storyboard */,
@@ -88,7 +88,7 @@
 			path = NetworkPractise;
 			sourceTree = "<group>";
 		};
-		1166F4B02B1391A000ECF666 /* Posts Page */ = {
+		1166F4B02B1391A000ECF666 /* Post tab */ = {
 			isa = PBXGroup;
 			children = (
 				1166F4A42B13543E00ECF666 /* PostResponseModel.swift */,
@@ -102,7 +102,7 @@
 				1166F4B52B13A13C00ECF666 /* CommentCell.swift */,
 				1166F4B62B13A13C00ECF666 /* CommentCell.xib */,
 			);
-			path = "Posts Page";
+			path = "Post tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
