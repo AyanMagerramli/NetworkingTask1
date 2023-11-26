@@ -145,6 +145,7 @@
                         <segue destination="J2p-R3-bcC" kind="relationship" relationship="viewControllers" id="SeM-Ko-YWo"/>
                         <segue destination="dQa-Q7-Lyf" kind="relationship" relationship="viewControllers" id="czM-68-uXg"/>
                         <segue destination="Zz3-Xk-shd" kind="relationship" relationship="viewControllers" id="VSB-UM-RRG"/>
+                        <segue destination="tDq-E1-PVX" kind="relationship" relationship="viewControllers" id="dND-b9-qa3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asr-GI-TdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,7 +156,7 @@
         <scene sceneID="A1T-Tm-NMb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dQa-Q7-Lyf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" selectedImage="text.bubble.fill.rtl" catalog="system" id="EmE-CY-wZp">
+                    <tabBarItem key="tabBarItem" title="Post" image="text.bubble.fill" catalog="system" id="EmE-CY-wZp">
                         <color key="badgeColor" red="0.95686274510000002" green="0.76862745099999996" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -176,7 +177,7 @@
         <scene sceneID="Z9t-O8-zEx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2p-R3-bcC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" selectedImage="person.fill" catalog="system" id="DGm-ok-hBO"/>
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="DGm-ok-hBO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ktg-bJ-Omi">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -220,13 +221,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIC-HC-hwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="1420"/>
+            <point key="canvasLocation" x="834" y="1420"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="kmD-gs-FAo">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ry2-Hi-X2L" customClass="PhotoViewController" customModule="NetworkPractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TF8-Pe-1rv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WYC-Jb-LPm">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UwH-Cy-yS6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UwH-Cy-yS6" firstAttribute="bottom" secondItem="WYC-Jb-LPm" secondAttribute="bottom" id="BYU-It-P7E"/>
+                            <constraint firstAttribute="trailing" secondItem="WYC-Jb-LPm" secondAttribute="trailing" id="CDs-pH-SV5"/>
+                            <constraint firstItem="WYC-Jb-LPm" firstAttribute="top" secondItem="UwH-Cy-yS6" secondAttribute="top" id="ROE-uJ-QM9"/>
+                            <constraint firstItem="WYC-Jb-LPm" firstAttribute="leading" secondItem="UwH-Cy-yS6" secondAttribute="leading" id="hyk-H0-CHj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photos" id="6TP-TC-bqm"/>
+                    <connections>
+                        <outlet property="table" destination="WYC-Jb-LPm" id="u2b-L2-Oj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu2-LZ-una" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1898" y="1420"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="bJr-3F-acC">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YFY-9O-WFz" customClass="PhotoDetailViewController" customModule="NetworkPractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4s4-0T-yDs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lGw-P1-vQn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XeK-ZT-Avn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XeK-ZT-Avn" firstAttribute="bottom" secondItem="lGw-P1-vQn" secondAttribute="bottom" id="cqW-2w-bvX"/>
+                            <constraint firstItem="lGw-P1-vQn" firstAttribute="leading" secondItem="XeK-ZT-Avn" secondAttribute="leading" id="sUb-wX-bbB"/>
+                            <constraint firstItem="XeK-ZT-Avn" firstAttribute="trailing" secondItem="lGw-P1-vQn" secondAttribute="trailing" id="si2-NQ-HXU"/>
+                            <constraint firstItem="lGw-P1-vQn" firstAttribute="top" secondItem="XeK-ZT-Avn" secondAttribute="top" id="tyb-AZ-e5H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="lGw-P1-vQn" id="SSD-u7-2rR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixm-O4-x0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1147" y="1420"/>
         </scene>
         <!--Albums-->
         <scene sceneID="egs-5f-MQO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zz3-Xk-shd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" selectedImage="folder.fill" catalog="system" id="YHd-oT-F8r"/>
+                    <tabBarItem key="tabBarItem" title="Albums" image="folder.fill" catalog="system" id="YHd-oT-F8r"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Xe-dt-LJN">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -239,13 +301,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwG-nC-hDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-816" y="1420"/>
+            <point key="canvasLocation" x="74" y="1420"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="3b6-1T-sMp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tDq-E1-PVX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Photo" image="photo.artframe" catalog="system" id="zk9-Fo-UOg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2JJ-k7-dDb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ry2-Hi-X2L" kind="relationship" relationship="rootViewController" id="seP-kw-L66"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOx-H7-3al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2686.2595419847326" y="1419.7183098591549"/>
         </scene>
     </scenes>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="text.bubble.fill.rtl" catalog="system" width="128" height="110"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="text.bubble.fill" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
