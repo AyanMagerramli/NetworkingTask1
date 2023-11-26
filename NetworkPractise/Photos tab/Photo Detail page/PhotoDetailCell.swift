@@ -13,7 +13,6 @@ protocol PhotoDetailCellProtocol {
 }
 
 class PhotoDetailCell: UITableViewCell {
-
     @IBOutlet weak var photoView: UIImageView!
     
     func configureUI(data: PhotoDetailCellProtocol) {

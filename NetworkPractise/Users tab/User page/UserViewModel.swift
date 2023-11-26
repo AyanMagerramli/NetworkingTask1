@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserViewModel {
+final class UserViewModel {
     var users = [WelcomeElement]()
     let networkManager: NetworkManager
     

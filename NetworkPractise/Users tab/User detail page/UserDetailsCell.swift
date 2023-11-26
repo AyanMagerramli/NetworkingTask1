@@ -15,7 +15,6 @@ protocol UserDetailsCellProtocol {
 }
 
 class UserDetailsCell: UITableViewCell {
-
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var company: UILabel!
     @IBOutlet weak var username: UILabel!    

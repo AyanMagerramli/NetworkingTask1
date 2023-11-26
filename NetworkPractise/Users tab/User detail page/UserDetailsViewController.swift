@@ -1,21 +1,21 @@
 //
-//  PhotoDetailViewController.swift
+//  UserDetailsViewController.swift
 //  NetworkPractise
 //
-//  Created by Ayan on 27.11.23.
+//  Created by Ayan on 26.11.23.
 //
 
 import UIKit
 
-class PhotoDetailViewController: UIViewController {
-
+class UserDetailsViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
-    var viewModel = PhotoDetailViewModel(networkManager: NetworkManager.shared)
+    
+    var viewModel = UserDetailsViewModel(networkManager: NetworkManager.shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        viewModel.getPhotos { [weak self] in
+        viewModel.getUserDetails { [weak self] in
             DispatchQueue.main.async {
                 self?.table.reloadData()
             }
@@ -25,28 +25,28 @@ class PhotoDetailViewController: UIViewController {
     func configureUI() {
         table.delegate = self
         table.dataSource = self
-        table.register(UINib(nibName: "PhotoDetailCell", bundle: nil), forCellReuseIdentifier: "PhotoDetailCell")
+        table.register(UINib(nibName: "UserDetailsCell", bundle: nil), forCellReuseIdentifier: "UserDetailsCell")
     }
 }
 
-extension PhotoDetailViewController: UITableViewDataSource {
+extension UserDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.photos.count
+        viewModel.userDetails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoDetailCell", for: indexPath) as! PhotoDetailCell
-        cell.configureUI(data: viewModel.photos[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserDetailsCell", for: indexPath) as! UserDetailsCell
+        cell.configureUI(data: viewModel.userDetails[indexPath.row])
         return cell
     }
 }
 
-extension PhotoDetailViewController: UITableViewDelegate {
+extension UserDetailsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.frame.height
+        180
     }
 }

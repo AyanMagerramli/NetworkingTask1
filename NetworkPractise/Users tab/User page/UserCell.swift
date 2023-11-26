@@ -13,7 +13,6 @@ protocol UserCellProtocol {
 }
 
 class UserCell: UITableViewCell {
-
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     

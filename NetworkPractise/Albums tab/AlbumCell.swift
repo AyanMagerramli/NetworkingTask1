@@ -11,7 +11,6 @@ protocol AlbumCellProtocol{
 }
 
 class AlbumCell: UITableViewCell {
-
     @IBOutlet weak var name: UILabel!
     
     func configureUI(data: AlbumCellProtocol) {

@@ -8,7 +8,6 @@
 import UIKit
 
 class AlbumViewController: UIViewController {
-
     @IBOutlet weak var table: UITableView!
     
     let viewModel = AlbumViewModel(networkManager: NetworkManager.shared)

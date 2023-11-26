@@ -8,7 +8,6 @@
 import UIKit
 
 class UserViewController: UIViewController {
-
     @IBOutlet weak var table: UITableView!
     
     let viewModel = UserViewModel(networkManager: NetworkManager.shared)

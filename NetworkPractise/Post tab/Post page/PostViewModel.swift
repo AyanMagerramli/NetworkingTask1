@@ -8,7 +8,6 @@
 import Foundation
 
 final class PostViewModel {
-    
     var postItems: [PostResponseModel]?
     private let networkManager: NetworkManager
     

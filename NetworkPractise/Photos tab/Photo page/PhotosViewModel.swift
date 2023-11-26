@@ -1,33 +1,33 @@
 //
-//  UserDetailsViewModel.swift
+//  PhotosViewModel.swift
 //  NetworkPractise
 //
 //  Created by Ayan on 26.11.23.
 //
 
 import Foundation
-class UserDetailsViewModel {
+
+final class PhotosViewModel {
+    var photos = [PhotoResponseModel]()
     let networkManager: NetworkManager
-    var userDetails = [WelcomeElement]()
-    var userID = 0
     
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
     
     private enum Constant: String {
-        case userParam = "users?id="
+        case photoParam = "photos"
     }
     
-    func getUserDetails(completion: @escaping ()-> Void) {
+    func getPhotos(completion: @escaping () -> Void) {
         networkManager.getObjects(
-            type: [WelcomeElement].self,
-            urlParam: Constant.userParam.rawValue + "\(userID)")
+            type: [PhotoResponseModel].self,
+            urlParam: Constant.photoParam.rawValue)
         {
             [weak self] result in
             switch result {
-            case .success(let users):
-                self?.userDetails = users
+            case .success(let photos):
+                self?.photos = photos
                 completion()
             case .failure(let error):
                 print(error.localizedDescription)

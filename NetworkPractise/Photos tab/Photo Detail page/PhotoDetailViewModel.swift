@@ -6,8 +6,8 @@
 //
 
 import Foundation
-class PhotoDetailViewModel {
-    
+
+final class PhotoDetailViewModel {
     var photos = [PhotoResponseModel]()
     let networkManager: NetworkManager
     var id = 0

@@ -6,8 +6,8 @@
 //
 
 import Foundation
-final class AlbumViewModel {
 
+final class AlbumViewModel {
     let networkManager: NetworkManager
     var albums = [AlbumResponseModel]()
     

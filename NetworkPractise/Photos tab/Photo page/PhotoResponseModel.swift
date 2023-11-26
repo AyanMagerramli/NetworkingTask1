@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct PhotoResponseModel: Codable, PhotoCellProtocol, PhotoDetailCellProtocol {
     let albumId: Int?
     let id: Int?
@@ -23,8 +24,7 @@ struct PhotoResponseModel: Codable, PhotoCellProtocol, PhotoDetailCellProtocol {
     
     var userPhoto: String {
         url ?? ""
-    }
-    
+    }    
 }
 
 /*

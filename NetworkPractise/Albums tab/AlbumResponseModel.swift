@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct AlbumResponseModel: Codable, AlbumCellProtocol {
     let userId : Int?
     let id: Int?

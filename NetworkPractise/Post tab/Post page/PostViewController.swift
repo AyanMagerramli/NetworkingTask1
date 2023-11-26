@@ -8,11 +8,9 @@
 import UIKit
 
 class PostViewController: UIViewController {
-
     @IBOutlet weak var table: UITableView!
     let viewModel = PostViewModel(networkManager: NetworkManager.shared)
     let viewModel2 = CommentsViewModel(networkManager: NetworkManager.shared)
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

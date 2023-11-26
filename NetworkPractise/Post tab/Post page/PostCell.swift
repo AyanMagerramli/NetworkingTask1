@@ -12,7 +12,6 @@ protocol PostCellProtocol{
 }
 
 class PostCell: UITableViewCell {
-
     @IBOutlet weak var postBody: UILabel!
     @IBOutlet weak var postTitle: UILabel!
     

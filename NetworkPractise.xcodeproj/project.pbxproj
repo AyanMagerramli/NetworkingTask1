@@ -144,16 +144,8 @@
 		1166F4B02B1391A000ECF666 /* Post tab */ = {
 			isa = PBXGroup;
 			children = (
-				1166F4A42B13543E00ECF666 /* PostResponseModel.swift */,
-				1166F4942B13533100ECF666 /* PostViewController.swift */,
-				1166F4AC2B13849500ECF666 /* PostViewModel.swift */,
-				1166F4B12B139C2D00ECF666 /* PostCell.swift */,
-				1166F4B22B139C2D00ECF666 /* PostCell.xib */,
-				1166F4A82B13639200ECF666 /* CommentResponseModel.swift */,
-				1166F4A62B13618000ECF666 /* CommentsViewController.swift */,
-				1166F4AE2B1388A500ECF666 /* CommentsViewModel.swift */,
-				1166F4B52B13A13C00ECF666 /* CommentCell.swift */,
-				1166F4B62B13A13C00ECF666 /* CommentCell.xib */,
+				11FC114B2B13E8EF009C844E /* Post page */,
+				11FC114C2B13E901009C844E /* Comment page */,
 			);
 			path = "Post tab";
 			sourceTree = "<group>";
@@ -161,15 +153,8 @@
 		11FC11152B13B15F009C844E /* Users tab */ = {
 			isa = PBXGroup;
 			children = (
-				11FC11182B13B1B9009C844E /* UserResponseModel.swift */,
-				11FC11132B13B15A009C844E /* UserViewController.swift */,
-				11FC11162B13B173009C844E /* UserViewModel.swift */,
-				11FC111A2B13B3B4009C844E /* UserCell.swift */,
-				11FC111B2B13B3B4009C844E /* UserCell.xib */,
-				11FC111E2B13B8F4009C844E /* UserDetailsViewController.swift */,
-				11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */,
-				11FC11202B13B9BD009C844E /* UserDetailsCell.swift */,
-				11FC11212B13B9BD009C844E /* UserDetailsCell.xib */,
+				11FC114D2B13E92A009C844E /* User page */,
+				11FC114E2B13E939009C844E /* User detail page */,
 			);
 			path = "Users tab";
 			sourceTree = "<group>";
@@ -189,17 +174,80 @@
 		11FC11312B13D550009C844E /* Photos tab */ = {
 			isa = PBXGroup;
 			children = (
+				11FC11492B13E8C5009C844E /* Photo page */,
+				11FC114A2B13E8D7009C844E /* Photo Detail page */,
+			);
+			path = "Photos tab";
+			sourceTree = "<group>";
+		};
+		11FC11492B13E8C5009C844E /* Photo page */ = {
+			isa = PBXGroup;
+			children = (
 				11FC11362B13D685009C844E /* PhotoResponseModel.swift */,
 				11FC11322B13D59F009C844E /* PhotoViewController.swift */,
 				11FC11342B13D677009C844E /* PhotosViewModel.swift */,
 				11FC11382B13D6F8009C844E /* PhotoCell.swift */,
 				11FC11392B13D6F8009C844E /* PhotoCell.xib */,
+			);
+			path = "Photo page";
+			sourceTree = "<group>";
+		};
+		11FC114A2B13E8D7009C844E /* Photo Detail page */ = {
+			isa = PBXGroup;
+			children = (
 				11FC11452B13E1F3009C844E /* PhotoDetailViewController.swift */,
 				11FC11472B13E234009C844E /* PhotoDetailViewModel.swift */,
 				11FC11412B13E1D5009C844E /* PhotoDetailCell.swift */,
 				11FC11422B13E1D5009C844E /* PhotoDetailCell.xib */,
 			);
-			path = "Photos tab";
+			path = "Photo Detail page";
+			sourceTree = "<group>";
+		};
+		11FC114B2B13E8EF009C844E /* Post page */ = {
+			isa = PBXGroup;
+			children = (
+				1166F4A42B13543E00ECF666 /* PostResponseModel.swift */,
+				1166F4942B13533100ECF666 /* PostViewController.swift */,
+				1166F4AC2B13849500ECF666 /* PostViewModel.swift */,
+				1166F4B12B139C2D00ECF666 /* PostCell.swift */,
+				1166F4B22B139C2D00ECF666 /* PostCell.xib */,
+			);
+			path = "Post page";
+			sourceTree = "<group>";
+		};
+		11FC114C2B13E901009C844E /* Comment page */ = {
+			isa = PBXGroup;
+			children = (
+				1166F4A82B13639200ECF666 /* CommentResponseModel.swift */,
+				1166F4A62B13618000ECF666 /* CommentsViewController.swift */,
+				1166F4AE2B1388A500ECF666 /* CommentsViewModel.swift */,
+				1166F4B52B13A13C00ECF666 /* CommentCell.swift */,
+				1166F4B62B13A13C00ECF666 /* CommentCell.xib */,
+			);
+			path = "Comment page";
+			sourceTree = "<group>";
+		};
+		11FC114D2B13E92A009C844E /* User page */ = {
+			isa = PBXGroup;
+			children = (
+				11FC11182B13B1B9009C844E /* UserResponseModel.swift */,
+				11FC11132B13B15A009C844E /* UserViewController.swift */,
+				11FC11162B13B173009C844E /* UserViewModel.swift */,
+				11FC111A2B13B3B4009C844E /* UserCell.swift */,
+				11FC111B2B13B3B4009C844E /* UserCell.xib */,
+			);
+			path = "User page";
+			sourceTree = "<group>";
+		};
+		11FC114E2B13E939009C844E /* User detail page */ = {
+			isa = PBXGroup;
+			children = (
+				11FC111E2B13B8F4009C844E /* UserDetailsViewController.swift */,
+				11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */,
+				11FC11202B13B9BD009C844E /* UserDetailsCell.swift */,
+				11FC11212B13B9BD009C844E /* UserDetailsCell.xib */,
+			);
+			path = "User detail page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

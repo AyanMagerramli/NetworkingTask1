@@ -8,7 +8,6 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-
     @IBOutlet weak var table: UITableView!
     
     let viewModel = PhotosViewModel(networkManager: NetworkManager.shared)
@@ -23,6 +22,7 @@ class PhotoViewController: UIViewController {
             }
         }
     }
+    
     func configureUI () {
         table.delegate = self
         table.dataSource = self

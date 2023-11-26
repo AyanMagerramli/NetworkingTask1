@@ -10,8 +10,6 @@ import Foundation
 typealias postItems = [PostResponseModel]
 
 struct PostResponseModel: Codable, PostCellProtocol {
-  
-
     let userId : Int?
     let id: Int?
     let title: String?
@@ -24,7 +22,6 @@ struct PostResponseModel: Codable, PostCellProtocol {
     var postTitle: String {
         title ?? ""
     }
-    
 }
 
 /*
