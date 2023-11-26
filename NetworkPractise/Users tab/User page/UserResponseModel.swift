@@ -11,11 +11,11 @@ typealias Welcome = [WelcomeElement]
 
     // MARK: - WelcomeElement
 struct WelcomeElement: Codable, UserCellProtocol, UserDetailsCellProtocol {
-        let id: Int?
-        let name, username, email: String?
-        let address: Address?
-        let phone, website: String?
-        let company: Company?
+    let id: Int?
+    let name, username, email: String?
+    let address: Address?
+    let phone, website: String?
+    let company: Company?
     
     var userName: String {
         name ?? ""
@@ -34,10 +34,16 @@ struct WelcomeElement: Codable, UserCellProtocol, UserDetailsCellProtocol {
     }
     
     var userAddress: String {
-        address?.street ?? ""
+        if let street = address?.street,
+           let suite = address?.suite,
+           let city = address?.city,
+           let zipcode = address?.zipcode{
+            return "\(street) \(suite) \(city)/\(zipcode)"
+        } else {
+            return ""
+        }
     }
 }
-
     // MARK: - Address
     struct Address: Codable {
         let street, suite, city, zipcode: String?

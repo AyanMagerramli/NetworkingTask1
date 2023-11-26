@@ -37,6 +37,7 @@ extension UserDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserDetailsCell", for: indexPath) as! UserDetailsCell
         cell.configureUI(data: viewModel.userDetails[indexPath.row])
+        navigationItem.title = viewModel.userDetails[indexPath.row].userName
         return cell
     }
 }
@@ -47,6 +48,6 @@ extension UserDetailsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        180
+        200
     }
 }

@@ -36,6 +36,7 @@ extension PhotoDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoDetailCell", for: indexPath) as! PhotoDetailCell
         cell.configureUI(data: viewModel.photos[indexPath.row])
+        navigationItem.title = viewModel.photos[indexPath.row].title
         return cell
     }
 }
