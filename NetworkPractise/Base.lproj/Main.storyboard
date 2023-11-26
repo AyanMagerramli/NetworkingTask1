@@ -69,21 +69,66 @@
             </objects>
             <point key="canvasLocation" x="879" y="46"/>
         </scene>
-        <!--Albums-->
+        <!--Users-->
         <scene sceneID="cHP-jW-tR5">
             <objects>
-                <viewController id="tTd-Tt-2WG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tTd-Tt-2WG" customClass="UserViewController" customModule="NetworkPractise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zot-Le-S6s">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D7n-Y8-TXb">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HUJ-aZ-78g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HUJ-aZ-78g" firstAttribute="bottom" secondItem="D7n-Y8-TXb" secondAttribute="bottom" id="RhL-3a-xbt"/>
+                            <constraint firstItem="D7n-Y8-TXb" firstAttribute="leading" secondItem="HUJ-aZ-78g" secondAttribute="leading" id="diE-E9-BJJ"/>
+                            <constraint firstItem="D7n-Y8-TXb" firstAttribute="top" secondItem="HUJ-aZ-78g" secondAttribute="top" id="gxS-lZ-6h3"/>
+                            <constraint firstItem="HUJ-aZ-78g" firstAttribute="trailing" secondItem="D7n-Y8-TXb" secondAttribute="trailing" id="w8I-RB-tHI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Albums" id="k04-IH-XHa"/>
+                    <navigationItem key="navigationItem" title="Users" id="k04-IH-XHa"/>
+                    <connections>
+                        <outlet property="table" destination="D7n-Y8-TXb" id="NeU-bi-c2z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggk-dB-4YE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="74.045801526717554" y="732.3943661971831"/>
+        </scene>
+        <!--User Details View Controller-->
+        <scene sceneID="pOa-9G-0qz">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jYf-n3-6zW" customClass="UserDetailsViewController" customModule="NetworkPractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCi-gY-1lM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bDe-UX-W79">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m9m-6g-WTk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m9m-6g-WTk" firstAttribute="trailing" secondItem="bDe-UX-W79" secondAttribute="trailing" id="7mW-aX-A4f"/>
+                            <constraint firstItem="bDe-UX-W79" firstAttribute="top" secondItem="m9m-6g-WTk" secondAttribute="top" id="A9n-eO-qNf"/>
+                            <constraint firstItem="m9m-6g-WTk" firstAttribute="bottom" secondItem="bDe-UX-W79" secondAttribute="bottom" id="Ciw-ml-za5"/>
+                            <constraint firstItem="bDe-UX-W79" firstAttribute="leading" secondItem="m9m-6g-WTk" secondAttribute="leading" id="Iu2-jk-eeM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="bDe-UX-W79" id="74D-Ty-X9R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCT-z1-zlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="732"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GXq-Uk-pYE">
@@ -126,11 +171,11 @@
             </objects>
             <point key="canvasLocation" x="-816" y="46"/>
         </scene>
-        <!--Albums-->
+        <!--User-->
         <scene sceneID="Z9t-O8-zEx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2p-R3-bcC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" selectedImage="folder.fill" catalog="system" id="DGm-ok-hBO"/>
+                    <tabBarItem key="tabBarItem" title="User" selectedImage="folder.fill" catalog="system" id="DGm-ok-hBO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ktg-bJ-Omi">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

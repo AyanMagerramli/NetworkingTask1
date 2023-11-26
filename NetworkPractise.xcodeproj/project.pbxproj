@@ -23,6 +23,15 @@
 		1166F4B42B139C2D00ECF666 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1166F4B22B139C2D00ECF666 /* PostCell.xib */; };
 		1166F4B72B13A13C00ECF666 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1166F4B52B13A13C00ECF666 /* CommentCell.swift */; };
 		1166F4B82B13A13C00ECF666 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1166F4B62B13A13C00ECF666 /* CommentCell.xib */; };
+		11FC11142B13B15A009C844E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11132B13B15A009C844E /* UserViewController.swift */; };
+		11FC11172B13B173009C844E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11162B13B173009C844E /* UserViewModel.swift */; };
+		11FC11192B13B1B9009C844E /* UserResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11182B13B1B9009C844E /* UserResponseModel.swift */; };
+		11FC111C2B13B3B4009C844E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC111A2B13B3B4009C844E /* UserCell.swift */; };
+		11FC111D2B13B3B4009C844E /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FC111B2B13B3B4009C844E /* UserCell.xib */; };
+		11FC111F2B13B8F4009C844E /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC111E2B13B8F4009C844E /* UserDetailsViewController.swift */; };
+		11FC11222B13B9BD009C844E /* UserDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11202B13B9BD009C844E /* UserDetailsCell.swift */; };
+		11FC11232B13B9BD009C844E /* UserDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FC11212B13B9BD009C844E /* UserDetailsCell.xib */; };
+		11FC11252B13BF66009C844E /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +53,15 @@
 		1166F4B22B139C2D00ECF666 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		1166F4B52B13A13C00ECF666 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		1166F4B62B13A13C00ECF666 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		11FC11132B13B15A009C844E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		11FC11162B13B173009C844E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		11FC11182B13B1B9009C844E /* UserResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseModel.swift; sourceTree = "<group>"; };
+		11FC111A2B13B3B4009C844E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		11FC111B2B13B3B4009C844E /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		11FC111E2B13B8F4009C844E /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		11FC11202B13B9BD009C844E /* UserDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsCell.swift; sourceTree = "<group>"; };
+		11FC11212B13B9BD009C844E /* UserDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsCell.xib; sourceTree = "<group>"; };
+		11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +97,12 @@
 				1166F4902B13533100ECF666 /* AppDelegate.swift */,
 				1166F4922B13533100ECF666 /* SceneDelegate.swift */,
 				1166F4AA2B13808C00ECF666 /* NetworkManager.swift */,
-				1166F4B02B1391A000ECF666 /* Post tab */,
 				1166F4962B13533100ECF666 /* Main.storyboard */,
 				1166F4992B13533200ECF666 /* Assets.xcassets */,
 				1166F49B2B13533200ECF666 /* LaunchScreen.storyboard */,
 				1166F49E2B13533200ECF666 /* Info.plist */,
+				1166F4B02B1391A000ECF666 /* Post tab */,
+				11FC11152B13B15F009C844E /* Users tab */,
 			);
 			path = NetworkPractise;
 			sourceTree = "<group>";
@@ -103,6 +122,22 @@
 				1166F4B62B13A13C00ECF666 /* CommentCell.xib */,
 			);
 			path = "Post tab";
+			sourceTree = "<group>";
+		};
+		11FC11152B13B15F009C844E /* Users tab */ = {
+			isa = PBXGroup;
+			children = (
+				11FC11182B13B1B9009C844E /* UserResponseModel.swift */,
+				11FC11132B13B15A009C844E /* UserViewController.swift */,
+				11FC11162B13B173009C844E /* UserViewModel.swift */,
+				11FC111A2B13B3B4009C844E /* UserCell.swift */,
+				11FC111B2B13B3B4009C844E /* UserCell.xib */,
+				11FC111E2B13B8F4009C844E /* UserDetailsViewController.swift */,
+				11FC11242B13BF66009C844E /* UserDetailsViewModel.swift */,
+				11FC11202B13B9BD009C844E /* UserDetailsCell.swift */,
+				11FC11212B13B9BD009C844E /* UserDetailsCell.xib */,
+			);
+			path = "Users tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FC11232B13B9BD009C844E /* UserDetailsCell.xib in Resources */,
 				1166F4B82B13A13C00ECF666 /* CommentCell.xib in Resources */,
 				1166F49D2B13533200ECF666 /* LaunchScreen.storyboard in Resources */,
+				11FC111D2B13B3B4009C844E /* UserCell.xib in Resources */,
 				1166F49A2B13533200ECF666 /* Assets.xcassets in Resources */,
 				1166F4982B13533100ECF666 /* Main.storyboard in Resources */,
 				1166F4B42B139C2D00ECF666 /* PostCell.xib in Resources */,
@@ -179,16 +216,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				1166F4A92B13639200ECF666 /* CommentResponseModel.swift in Sources */,
+				11FC11142B13B15A009C844E /* UserViewController.swift in Sources */,
+				11FC11252B13BF66009C844E /* UserDetailsViewModel.swift in Sources */,
 				1166F4AF2B1388A500ECF666 /* CommentsViewModel.swift in Sources */,
 				1166F4A52B13543E00ECF666 /* PostResponseModel.swift in Sources */,
 				1166F4B72B13A13C00ECF666 /* CommentCell.swift in Sources */,
 				1166F4952B13533100ECF666 /* PostViewController.swift in Sources */,
 				1166F4AD2B13849500ECF666 /* PostViewModel.swift in Sources */,
 				1166F4AB2B13808C00ECF666 /* NetworkManager.swift in Sources */,
+				11FC111C2B13B3B4009C844E /* UserCell.swift in Sources */,
 				1166F4912B13533100ECF666 /* AppDelegate.swift in Sources */,
+				11FC11222B13B9BD009C844E /* UserDetailsCell.swift in Sources */,
+				11FC11172B13B173009C844E /* UserViewModel.swift in Sources */,
 				1166F4A72B13618000ECF666 /* CommentsViewController.swift in Sources */,
 				1166F4932B13533100ECF666 /* SceneDelegate.swift in Sources */,
 				1166F4B32B139C2D00ECF666 /* PostCell.swift in Sources */,
+				11FC111F2B13B8F4009C844E /* UserDetailsViewController.swift in Sources */,
+				11FC11192B13B1B9009C844E /* UserResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

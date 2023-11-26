@@ -18,7 +18,6 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var body: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var name: UILabel!
-
     
     func configureUI (data: CommentCellProtocol) {
         body.text = data.commentBody
