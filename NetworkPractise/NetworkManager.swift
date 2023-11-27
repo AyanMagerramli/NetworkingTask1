@@ -7,7 +7,6 @@
 
 import Foundation
 final class NetworkManager {
-    
     static let shared = NetworkManager()
     let baseURL = "https://jsonplaceholder.typicode.com/"
     
