@@ -10,7 +10,7 @@ import UIKit
 class UserDetailsViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
-    var viewModel = UserDetailsViewModel(networkManager: NetworkManager.shared)
+    var viewModel = UserDetailsViewModel(userID: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,8 @@ class UserDetailsViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "UserDetailsCell", bundle: nil), forCellReuseIdentifier: "UserDetailsCell")
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 20.0
     }
 }
 
@@ -45,9 +47,5 @@ extension UserDetailsViewController: UITableViewDataSource {
 extension UserDetailsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
     }
 }

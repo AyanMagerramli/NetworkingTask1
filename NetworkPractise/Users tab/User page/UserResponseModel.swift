@@ -7,10 +7,10 @@
 
 import Foundation
 
-typealias Welcome = [WelcomeElement]
+typealias Welcome = [UserInfo]
 
     // MARK: - WelcomeElement
-struct WelcomeElement: Codable, UserCellProtocol, UserDetailsCellProtocol {
+struct UserInfo: Codable, UserCellProtocol, UserDetailsCellProtocol {
     let id: Int?
     let name, username, email: String?
     let address: Address?

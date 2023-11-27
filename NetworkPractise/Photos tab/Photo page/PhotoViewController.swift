@@ -10,8 +10,7 @@ import UIKit
 class PhotoViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
-    let viewModel = PhotosViewModel(networkManager: NetworkManager.shared)
-    let viewModel2 = PhotoDetailViewModel(networkManager: NetworkManager.shared)
+    let viewModel = PhotosViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,8 @@ class PhotoViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "PhotoCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 30.0
     }
 }
 
@@ -46,11 +47,6 @@ extension PhotoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as! PhotoDetailViewController
         navigationController?.show(controller, sender: nil)
-        controller.viewModel = viewModel2
-        viewModel2.id = viewModel.photos[indexPath.row].id ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        120
+        controller.viewModel = PhotoDetailViewModel(id: viewModel.photos[indexPath.row].id ?? 0)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 class AlbumViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
-    let viewModel = AlbumViewModel(networkManager: NetworkManager.shared)
+    let viewModel = AlbumViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,8 @@ class AlbumViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "AlbumCell", bundle: nil), forCellReuseIdentifier: "AlbumCell")
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 20.0
     }
 }
 
@@ -44,9 +46,5 @@ extension AlbumViewController: UITableViewDataSource {
 extension AlbumViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
     }
 }

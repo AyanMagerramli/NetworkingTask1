@@ -8,19 +8,14 @@
 import Foundation
 
 final class AlbumViewModel {
-    let networkManager: NetworkManager
     var albums = [AlbumResponseModel]()
     
     private enum Constant: String {
         case albumParam = "albums"
     }
     
-    init(networkManager: NetworkManager) {
-        self.networkManager = networkManager
-    }
-    
     func getAlbums(completion: @escaping ()-> Void) {
-        networkManager.getObjects(
+        NetworkManager.shared.getObjects(
             type: [AlbumResponseModel].self,
             urlParam: Constant.albumParam.rawValue)
         {

@@ -9,8 +9,7 @@ import UIKit
 
 class PostViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
-    let viewModel = PostViewModel(networkManager: NetworkManager.shared)
-    let viewModel2 = CommentsViewModel(networkManager: NetworkManager.shared)
+    let viewModel = PostViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +25,8 @@ class PostViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 30.0
     }
 }
 
@@ -38,13 +39,7 @@ extension PostViewController: UITableViewDelegate {
                print("Setting secondViewModel.postId to \(postId)")
         let controller = storyboard?.instantiateViewController(withIdentifier: "\(CommentsViewController.self)") as! CommentsViewController
         navigationController?.show(controller, sender: nil)
-        
-        controller.viewModel = viewModel2
-        viewModel2.postId = postId
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        controller.viewModel = CommentsViewModel(postId: viewModel.postItems?[indexPath.row].id ?? 0)
     }
 }
 

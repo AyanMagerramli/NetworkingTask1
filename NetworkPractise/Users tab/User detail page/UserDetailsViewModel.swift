@@ -7,12 +7,11 @@
 
 import Foundation
 final class UserDetailsViewModel {
-    let networkManager: NetworkManager
-    var userDetails = [WelcomeElement]()
-    var userID = 0
+    var userDetails = [UserInfo]()
+    var userID: Int
     
-    init(networkManager: NetworkManager) {
-        self.networkManager = networkManager
+    init(userID: Int) {
+        self.userID = userID
     }
     
     private enum Constant: String {
@@ -20,8 +19,8 @@ final class UserDetailsViewModel {
     }
     
     func getUserDetails(completion: @escaping ()-> Void) {
-        networkManager.getObjects(
-            type: [WelcomeElement].self,
+        NetworkManager.shared.getObjects(
+            type: [UserInfo].self,
             urlParam: Constant.userParam.rawValue + "\(userID)")
         {
             [weak self] result in

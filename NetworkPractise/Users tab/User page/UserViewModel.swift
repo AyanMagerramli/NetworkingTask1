@@ -8,20 +8,15 @@
 import Foundation
 
 final class UserViewModel {
-    var users = [WelcomeElement]()
-    let networkManager: NetworkManager
-    
-    init( networkManager: NetworkManager) {
-        self.networkManager = networkManager
-    }
+    var users = [UserInfo]()
     
     private enum Constant: String {
         case userParam = "users"
     }
     
     func getUsers(completion: @escaping ()->Void) {
-        networkManager.getObjects(
-            type: [WelcomeElement].self,
+        NetworkManager.shared.getObjects(
+            type: [UserInfo].self,
             urlParam: Constant.userParam.rawValue)
         {
             [weak self] result in

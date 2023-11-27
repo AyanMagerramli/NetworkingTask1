@@ -9,18 +9,13 @@ import Foundation
 
 final class PostViewModel {
     var postItems: [PostResponseModel]?
-    private let networkManager: NetworkManager
     
     private enum Constant: String {
         case postURL = "posts"
     }
     
-    init( networkManager: NetworkManager) {
-        self.networkManager = networkManager
-    }
-    
     func getPostItems(completion: @escaping (()-> Void)) {
-        networkManager.getObjects(
+        NetworkManager.shared.getObjects(
             type: [PostResponseModel].self,
             urlParam: Constant.postURL.rawValue)
         {

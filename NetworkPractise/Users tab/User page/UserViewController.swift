@@ -10,8 +10,7 @@ import UIKit
 class UserViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
-    let viewModel = UserViewModel(networkManager: NetworkManager.shared)
-    let viewModel2 = UserDetailsViewModel(networkManager: NetworkManager.shared)
+    let viewModel = UserViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,8 @@ class UserViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+        table.rowHeight = UITableView.automaticDimension;
+        table.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
     }
 }
 
@@ -46,11 +47,6 @@ extension UserViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(identifier: "UserDetailsViewController") as! UserDetailsViewController
         navigationController?.show(controller, sender: nil)
-        controller.viewModel = viewModel2
-        viewModel2.userID = viewModel.users[indexPath.row].id ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
+        controller.viewModel = UserDetailsViewModel(userID: viewModel.users[indexPath.row].id ?? 0)
     }
 }

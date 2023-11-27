@@ -9,15 +9,14 @@ import Foundation
 
 final class PhotoDetailViewModel {
     var photos = [PhotoResponseModel]()
-    let networkManager: NetworkManager
-    var id = 0
+    var id: Int
     
-    init(networkManager: NetworkManager) {
-        self.networkManager = networkManager
+    init( id: Int) {
+        self.id = id
     }
     
     func getPhotos (completion: @escaping() -> Void) {
-        networkManager.getObjects(
+        NetworkManager.shared.getObjects(
             type: [PhotoResponseModel].self,
             urlParam: "photos?id=\(id)")
         {

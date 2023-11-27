@@ -9,15 +9,14 @@ import Foundation
 
 final class CommentsViewModel {
     var commentItems = [CommentResponseModel]()
-    let networkManager: NetworkManager
-    var postId: Int = 0
+    var postId: Int
     
-    init(networkManager: NetworkManager) {
-        self.networkManager = networkManager
+    init(postId: Int) {
+        self.postId = postId
     }
     
     func getComments(completion: @escaping (()-> Void)) {
-        networkManager.getObjects(
+        NetworkManager.shared.getObjects(
             type: [CommentResponseModel].self,
             urlParam: "comments?postId=\(postId)")
         {

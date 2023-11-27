@@ -9,7 +9,7 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
-    var viewModel = PhotoDetailViewModel(networkManager: NetworkManager.shared)
+    var viewModel = PhotoDetailViewModel(id: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()

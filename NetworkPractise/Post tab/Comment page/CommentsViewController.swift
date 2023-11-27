@@ -11,8 +11,7 @@ class CommentsViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
   
-    
-    var viewModel = CommentsViewModel(networkManager: NetworkManager.shared)
+    var viewModel = CommentsViewModel(postId: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +28,8 @@ class CommentsViewController: UIViewController {
         table.dataSource = self
         table.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
         navigationItem.title = "Comments"
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 20.0
     }
 }
 
@@ -47,9 +48,5 @@ extension CommentsViewController: UITableViewDataSource {
 extension CommentsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        160
     }
 }
