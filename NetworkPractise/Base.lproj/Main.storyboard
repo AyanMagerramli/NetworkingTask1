@@ -30,7 +30,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zXW-39-Xy9" secondAttribute="trailing" id="sQL-Iz-Rdo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Posts" id="Sqx-jj-Glg"/>
+                    <navigationItem key="navigationItem" title="Posts" id="Sqx-jj-Glg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="UU2-fR-X5N">
+                            <connections>
+                                <action selector="addButtontapped:" destination="BYZ-38-t0r" id="N5w-nm-9Rt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="zXW-39-Xy9" id="ALn-zP-wSs"/>
                     </connections>
@@ -68,6 +74,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vS9-zw-15b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="879" y="46"/>
+        </scene>
+        <!--AlamofireVC-->
+        <scene sceneID="hdG-tR-3UW">
+            <objects>
+                <viewController storyboardIdentifier="AlamofireVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="smq-gB-87A" customClass="AlamofireVC" customModule="NetworkPractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OBF-DL-Xm8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-h7-0YY">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celll" id="rIm-Nx-q43">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rIm-Nx-q43" id="bZd-qT-U0B">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iUA-D3-4kq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WSf-h7-0YY" firstAttribute="leading" secondItem="iUA-D3-4kq" secondAttribute="leading" id="0uu-IE-KMp"/>
+                            <constraint firstItem="iUA-D3-4kq" firstAttribute="bottom" secondItem="WSf-h7-0YY" secondAttribute="bottom" id="B1d-BJ-HEi"/>
+                            <constraint firstItem="WSf-h7-0YY" firstAttribute="top" secondItem="iUA-D3-4kq" secondAttribute="top" id="oDF-ph-VoU"/>
+                            <constraint firstItem="WSf-h7-0YY" firstAttribute="trailing" secondItem="iUA-D3-4kq" secondAttribute="trailing" id="tNx-5J-qg8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9T9-P4-Ud2">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="jLn-EI-Xpk">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="smq-gB-87A" id="qmA-X8-Yta"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="WSf-h7-0YY" id="0B1-BJ-UEr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udk-oY-td5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.625954198473281" y="-730.28169014084506"/>
         </scene>
         <!--Users-->
         <scene sceneID="cHP-jW-tR5">
@@ -146,11 +199,12 @@
                         <segue destination="dQa-Q7-Lyf" kind="relationship" relationship="viewControllers" id="czM-68-uXg"/>
                         <segue destination="Zz3-Xk-shd" kind="relationship" relationship="viewControllers" id="VSB-UM-RRG"/>
                         <segue destination="tDq-E1-PVX" kind="relationship" relationship="viewControllers" id="dND-b9-qa3"/>
+                        <segue destination="Cqr-hu-sNg" kind="relationship" relationship="viewControllers" id="OBs-hh-v6R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asr-GI-TdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1796" y="447"/>
+            <point key="canvasLocation" x="-2289" y="46"/>
         </scene>
         <!--Post-->
         <scene sceneID="A1T-Tm-NMb">
@@ -322,11 +376,32 @@
             </objects>
             <point key="canvasLocation" x="-2686.2595419847326" y="1419.7183098591549"/>
         </scene>
+        <!--alamofire-->
+        <scene sceneID="9rz-mm-DiZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cqr-hu-sNg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="alamofire" image="network" catalog="system" id="ohX-TF-Ib9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pka-O0-w8o">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="smq-gB-87A" kind="relationship" relationship="rootViewController" id="0Zd-8T-Edf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZx-Om-VDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848.09160305343505" y="-730.28169014084506"/>
+        </scene>
     </scenes>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="network" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="text.bubble.fill" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -335,7 +410,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

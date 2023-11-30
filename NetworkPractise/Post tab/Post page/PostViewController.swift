@@ -15,7 +15,16 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         viewModel.getPostItems {
-            DispatchQueue.main.async {[weak self] in
+            DispatchQueue.main.async { [weak self] in
+                self?.table.reloadData()
+            }
+        }
+    }
+    
+    //MARK: creating new post {POST}
+    @IBAction func addButtontapped(_ sender: Any) {
+        viewModel.createPosts {
+            DispatchQueue.main.async { [weak self] in
                 self?.table.reloadData()
             }
         }
@@ -33,10 +42,10 @@ class PostViewController: UIViewController {
 extension PostViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let postId = viewModel.postItems?[indexPath.row].id else {
-                   print("postId is nil")
-                   return
-               }
-               print("Setting secondViewModel.postId to \(postId)")
+            print("postId is nil")
+            return
+        }
+        print("Setting secondViewModel.postId to \(postId)")
         let controller = storyboard?.instantiateViewController(withIdentifier: "\(CommentsViewController.self)") as! CommentsViewController
         navigationController?.show(controller, sender: nil)
         controller.viewModel = CommentsViewModel(postId: viewModel.postItems?[indexPath.row].id ?? 0)
